@@ -62,7 +62,6 @@ public class Assignment1 {  // begin class
         
         for(int i = place; i < 1000; i ++){
          number = (int)(Math.random() * 50 + 1);
-         System.out.println(number);
          fout.println(number);
         }
      

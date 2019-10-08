@@ -74,19 +74,9 @@ public class Assignment1Q2 {  // begin class
             strin = fin.readLine();
         } // end load array
     
-        for(int j = 1; j <= 50; j++){
-            
-            for(int k = 0; k < 1000; k++){
-                
-                if(numbers[k] == j){
-                    frequency[j-1] ++;
-                } else {
-                    
-                } // end add to frequency
-                
-            } // end frequency of number
-            
-        } // end frequency full 
+        for(int j = 0; j < 1000; j++){
+            frequency[numbers[j]-1] ++;
+        } // end frequency
         
         prompt = "Which number would you like to see the frequency of? Enter 0 to end.";
         strin = JOptionPane.showInputDialog(bannerOut + prompt);
