@@ -40,7 +40,7 @@ public class Assignment1 {  // begin class
     	
     // ***** create objects *******
 
-        PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("outFile.txt")));
+        PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("outFilenum.txt")));
     	
     // ********** Print output Banner **********
 
@@ -55,8 +55,6 @@ public class Assignment1 {  // begin class
         bannerOut += "Class: CS30S" + nl;
         bannerOut += "Assignment: A1 Q1" + nl;
         bannerOut += "*******************************************" + nl + nl;
-        
-        fout.print(bannerOut);		// prints the banner to the output text file
     	
     // ************************ get input **********************
 
