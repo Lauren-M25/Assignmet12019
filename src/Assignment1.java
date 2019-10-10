@@ -22,19 +22,19 @@ public class Assignment1 {  // begin class
     
     // ********** declaration of variables **********
 
-        String strin;				   // string data input from keyboard
+        String strin;				  // string data input from keyboard
         String strout;				  // processed info string to be output
-        String bannerOut;			// string to print banner to message dialogs
+        String bannerOut;			  // string to print banner to message dialogs
 
         String prompt;				  // prompt for use in input dialogs
 
-        String delim = "[ :]+";		// delimiter string for splitting input string
-        String[] tokens;    // string array for gathering input
+        String delim = "[ :]+";		          // delimiter string for splitting input string
+        String[] tokens;                          // string array for gathering input
         
         String nl = System.lineSeparator();
         
-        int number = 0;     // number in list
-        int place = 0;      // index of number
+        int number = 0;                           // number in list
+        int place = 0;                            // index of number
      
         // new line character for file writing
     	
@@ -61,9 +61,9 @@ public class Assignment1 {  // begin class
     // ************************ processing ***************************
         
         for(int i = place; i < 1000; i ++){
-         number = (int)(Math.random() * 50 + 1);
-         fout.println(number);
-        }
+         number = (int)(Math.random() * 50 + 1); // generate random number
+         fout.println(number); // print number
+        } // end print random numbers to txt file
      
         
     // ************************ print output ****************************

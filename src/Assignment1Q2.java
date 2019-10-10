@@ -65,46 +65,49 @@ public class Assignment1Q2 {  // begin class
 
     // ************************ processing ***************************
 
-        strin = fin.readLine();
+        strin = fin.readLine(); // read in first number
         
         for(int i = 0; i < 1000; i++){
             
-            numbers[i] = Integer.parseInt(strin);
+            numbers[i] = Integer.parseInt(strin); // load number into array
             
-            strin = fin.readLine();
+            strin = fin.readLine(); // read next number
         } // end load array
     
         for(int j = 0; j < 1000; j++){
-            frequency[numbers[j]-1] ++;
+            frequency[numbers[j]-1] ++; // count number for frequency
         } // end frequency
         
         prompt = "Which number would you like to see the frequency of? Enter 0 to end.";
         strin = JOptionPane.showInputDialog(bannerOut + prompt);
         
-        tokens = strin.split(delim);
+        tokens = strin.split(delim); // declare tokens
         
         try{
         answer = Integer.parseInt(tokens[0]); // parse answer
-        }
+        } // end try
         catch(NumberFormatException e){
             System.out.println("Please enter a number.");
-        }
+        } // end catch
+                
         while(answer != 0){
         
         try{
            System.out.println("frequency of " + answer + ": " + frequency[answer-1]);
-        }
+        } // end try
         catch(ArrayIndexOutOfBoundsException e){
            System.out.println("You must enter an available digit.");
-        }
+        } // end catch
         catch(NumberFormatException e){
             System.out.println("Please enter one number.");
-        }
+        } // end catch
+        
            prompt = "Which number would you like to see the frequency of? Enter 0 to end.";
            strin = JOptionPane.showInputDialog(bannerOut + prompt);
         
            tokens = strin.split(delim);
            answer = Integer.parseInt(tokens[0]); // parse answer
+           
         } // end show frequency
         
         prompt = "What range of numbers would you like to see the frequency of? Enter 0 to 0 to end.";
@@ -115,13 +118,14 @@ public class Assignment1Q2 {  // begin class
         try{
         lowerbound = Integer.parseInt(tokens[0]); // parse lowerbound
         upperbound = Integer.parseInt(tokens[1]); // parse upper
-        }
+        } // end try
         catch(NumberFormatException e){
             System.out.println("Please format range x to y.");
-        }
+        } // end catch
     while(lowerbound != 0){
+        
         for(int m = lowerbound; m <= upperbound; m++){
-            frequencyrange += frequency[m-1];
+            frequencyrange += frequency[m-1]; // calculate frequency range
         } // end frequency range
         
         System.out.println("frequency of numbers " + lowerbound + " to " + upperbound + ": " + frequencyrange);
@@ -132,7 +136,7 @@ public class Assignment1Q2 {  // begin class
         tokens = strin.split(delim);
         lowerbound = Integer.parseInt(tokens[0]); // parse lowerbound
         upperbound = Integer.parseInt(tokens[1]); // parse upper
-    }
+    } // end frequency range
         
     // ************************ print output ****************************
     
