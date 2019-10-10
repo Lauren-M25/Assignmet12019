@@ -82,12 +82,24 @@ public class Assignment1Q2 {  // begin class
         strin = JOptionPane.showInputDialog(bannerOut + prompt);
         
         tokens = strin.split(delim);
-        answer = Integer.parseInt(tokens[0]); // parse answer
         
+        try{
+        answer = Integer.parseInt(tokens[0]); // parse answer
+        }
+        catch(NumberFormatException e){
+            System.out.println("Please enter a number.");
+        }
         while(answer != 0){
-            
+        
+        try{
            System.out.println("frequency of " + answer + ": " + frequency[answer-1]);
-            
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+           System.out.println("You must enter an available digit.");
+        }
+        catch(NumberFormatException e){
+            System.out.println("Please enter one number.");
+        }
            prompt = "Which number would you like to see the frequency of? Enter 0 to end.";
            strin = JOptionPane.showInputDialog(bannerOut + prompt);
         
@@ -99,9 +111,14 @@ public class Assignment1Q2 {  // begin class
         strin = JOptionPane.showInputDialog(bannerOut + prompt);
         
         tokens = strin.split(delim);
+        
+        try{
         lowerbound = Integer.parseInt(tokens[0]); // parse lowerbound
         upperbound = Integer.parseInt(tokens[1]); // parse upper
-        
+        }
+        catch(NumberFormatException e){
+            System.out.println("Please format range x to y.");
+        }
     while(lowerbound != 0){
         for(int m = lowerbound; m <= upperbound; m++){
             frequencyrange += frequency[m-1];
