@@ -125,10 +125,9 @@ public class Assignment1Q2 {  // begin class
     while(lowerbound != 0){
         
         for(int m = lowerbound; m <= upperbound; m++){
-            frequencyrange += frequency[m-1]; // calculate frequency range
+            System.out.println("frequency of " + m + " : " + frequency[m-1]);
         } // end frequency range
         
-        System.out.println("frequency of numbers " + lowerbound + " to " + upperbound + ": " + frequencyrange);
         
         prompt = "What range of numbers would you like to see the frequency of? Enter 0 to 0 to end.";
         strin = JOptionPane.showInputDialog(bannerOut + prompt);
